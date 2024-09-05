@@ -73,3 +73,16 @@ project_grades <- c(85, 92, 79, 93, 90, 91, 95)
 class_scores_sum_recycled <- exam_grades + homework_grades + project_grades
 # (b) Calculate avg score for each class
 class_scores_avg_recycled <- class_scores_sum_recycled / 3
+
+# Task 10 - using vector names
+exam_grades <- c(92, 90, 84, 95, 77, 92, 85)
+homework_grades <- c(87, 81, 95, 86, 85, 90, 88)
+project_grades <- c(85, 92, 79, 93, 90, 91, 95)
+class_names <- c("math", "chemistry", "writing", "art", "history", "music", "physical_education")
+# (a) Name the elements in exam_grades with class names
+names(exam_grades) <- class_names	
+# (b) Name elements in homework_grades with class names
+names(homework_grades) <- class_names	
+# (c) Name elements in project_grades with class names
+names(project_grades) <- class_names
+
