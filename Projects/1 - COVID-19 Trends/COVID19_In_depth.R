@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 # Loading the dataset
-covid_df <- read_csv("covid19.csv")
+covid_df <- read_csv("Projects/1 - COVID-19 Trends/COVID19_Data.csv")
 
 # Displaing the dimension of the data:
 dim(covid_df)
@@ -63,10 +63,10 @@ covid_df_all_states_cum_max <- covid_df_all_states_cumulative %>%
 covid_df_all_states_cum_max
 
 #    Displaying the maximum number of death by country, colored by continent
-gglot(data = covid_df_all_states_cum_max,
-      aes(x = Two_Letter_Country_Code,
-          y = max,
-          col = Continent_Name)) +
+ggplot(data = covid_df_all_states_cum_max,
+       aes(x = Two_Letter_Country_Code,
+           y = max,
+           col = Continent_Name)) +
   geom_point()
 
 # Which countries have had the highest fatality (mortality) rates?
